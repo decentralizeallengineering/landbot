@@ -1,0 +1,9 @@
+[Unit]
+Description=Land ready/* branches through the gate
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/agent-repo
+ExecStart=/usr/local/bin/landbot run
+# Exit codes 3 (paused) and 4 (another run holds the lock) are not failures.
+SuccessExitStatus=3 4

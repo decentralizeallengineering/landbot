@@ -1,0 +1,10 @@
+[Unit]
+Description=Run landbot when a ready branch appears
+
+[Path]
+# Watches the loose refs; the directory changes when a ready/* branch is created.
+PathChanged=/srv/agent-repo/.git/refs/heads/ready
+Unit=landbot.service
+
+[Install]
+WantedBy=multi-user.target

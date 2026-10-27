@@ -1,0 +1,5 @@
+# Copy to landbot.toml in the root of the repo.
+gate = "pytest -q"   # run once per batch, in a temporary worktree; exit 0 means green
+main = "main"        # branch that batches are merged onto and landed on
+batch_size = 8       # most ready/* branches taken per run
+timeout = 600        # seconds before the gate is killed and counted as red

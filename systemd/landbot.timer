@@ -1,0 +1,9 @@
+[Unit]
+Description=Run landbot every five minutes
+
+[Timer]
+OnCalendar=*:0/5
+Unit=landbot.service
+
+[Install]
+WantedBy=timers.target
